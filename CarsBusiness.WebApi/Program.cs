@@ -1,4 +1,8 @@
+using CarsBusiness.Abstractions;
+using CarsBusiness.Abstractions.User;
 using CarsBusiness.Persistence;
+using CarsBusiness.Services;
+using CarsBusiness.Services.User;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +18,9 @@ builder.Services.AddDbContext<UserDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 var app = builder.Build();
 
