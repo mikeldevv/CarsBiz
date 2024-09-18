@@ -1,4 +1,4 @@
-namespace CarsBusiness.WebApi.Dtos;
+namespace CarsBusiness.WebApi.Dtos.User;
 
 public class RegisterUserRequestDto
 {
