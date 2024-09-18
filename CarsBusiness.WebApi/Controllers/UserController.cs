@@ -1,6 +1,5 @@
 using CarsBusiness.Abstractions;
 using CarsBusiness.Abstractions.User;
-using CarsBusiness.WebApi.Dtos;
 using CarsBusiness.WebApi.Dtos.User;
 using Microsoft.AspNetCore.Mvc;
 
